@@ -1,0 +1,102 @@
+{
+  "main": {
+    "id": "3d6cd173424270d3",
+    "type": "split",
+    "children": [
+      {
+        "id": "a360f7ad8aefb99e",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Untitled.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0292479924b646a1",
+    "type": "split",
+    "children": [
+      {
+        "id": "b464bcb7e78aee6d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "30d67e0743545f6e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "8fb9933c7b9c73ac",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "2fcaff86c8311d43",
+    "type": "split",
+    "children": [
+      {
+        "id": "5490b364806fecd1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2fdc476965b242af",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Untitled.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "a360f7ad8aefb99e",
+  "lastOpenFiles": [
+    "Untitled.md",
+    "LinuxModules/Index.md",
+    "Inv-Windows/Investigating Windows.md",
+    "Curso/Modulo2.md",
+    "Curso/Modulo1.md",
+    "regex.md",
+    "Rooms/Tor-Linux.md",
+    "README.md.md"
+  ]
+}
