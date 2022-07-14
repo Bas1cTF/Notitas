@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "a360f7ad8aefb99e",
+        "id": "ab9c1396e81a9ffd",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Untitled.md",
+            "file": "Notas/Road-to-Hackmex.md",
             "mode": "source",
             "source": false
           }
@@ -53,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "2fcaff86c8311d43",
@@ -70,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled.md",
+                "file": "Notas/Road-to-Hackmex.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "a360f7ad8aefb99e",
+  "active": "ab9c1396e81a9ffd",
   "lastOpenFiles": [
+    "Blog/regex.md",
+    "README.md",
     "Untitled.md",
+    "Notas/Road-to-Hackmex.md",
+    "Untitled 1.md",
+    "Rooms/Tor-Linux.md",
     "LinuxModules/Index.md",
     "Inv-Windows/Investigating Windows.md",
     "Curso/Modulo2.md",
-    "Curso/Modulo1.md",
-    "regex.md",
-    "Rooms/Tor-Linux.md",
-    "README.md.md"
+    "Curso/Modulo1.md"
   ]
 }
