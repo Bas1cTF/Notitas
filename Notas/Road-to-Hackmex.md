@@ -54,3 +54,15 @@ Los puertos se obtienen del resultado obtenido en extract_ports
 import pty
 pty.spawn("/bin/bash")
 ```
+
+`rlwrap nc <IP> <PORT>` - Poder usar el cursor y el ctrl + v
+
+1. Identificar que existe un SQLi provocando el error `1'`.
+2. Identificar cuantas columnas tiene la tabla actual.
+3. Identificar cuales de las columnas permiten desplegar strings. `union select 'a','a','a'`.
+4. (`SELECT name FROM sqlite_schema WHERE type='table' ORDER BY name`)
+
+Paginas confiables 
+- ExploitDB
+- GitHub
+- Rapid7
