@@ -48,12 +48,12 @@ Tenemos dos principales categorías de escenarios:
 		- Figurar los tipos de datos de las columnas (interesa que sea string)
 		- Utilizar el operador `UNION` para obtener información de la base de datos.
 		- El número de columnas se determinan usando `ORDER BY`: 
-	```SQL
-	select title, cost from product where id = 1 order by 1
-	order by 1--
-	order by 2--
-	order by 3-- Da error porque no hay tres columnas.
-	```
+```SQL
+select title, cost from product where id = 1 order by 1
+order by 1--
+order by 2--
+order by 3-- Da error porque no hay tres columnas.
+```
 - Número de columnas usando valores NULL:
 ```SQL
 select title, cost from product where id = 1 UNION SELECT NULL-- Muestra un error
@@ -67,4 +67,65 @@ select title, cost from product where id = 1 UNION SELECT NULL-- Muestra un erro
 - **Boolean-Based Blind SQLi**. 
 	- Enviar una condición Booleana que su valor sea FALSO y observar la respuesta.
 	- Enviar una condición Booleana que su valor sea TRUE y observar la respuesta.
-	- 
+	- Escribir un programa que use sentencias condicionales para enviar a la base de datos una serie de preguntas de TRUE/FALSE y monitorear la respuesta.
+- **Time-Based Blind SQLi**. 
+	- Enviar un payload que pause la aplicación por un periodo de tiempo específico.
+	- Escribir un programa que use sentencias condicionales para enviar a la base de datos una serie de preguntas de TRUE/FALSE y monitorear el tiempo de respuesta.
+	- Si existe un tiempo de pausa al obtener la respuesta la sentencia es Verdadera si no hay tiempo de espera es Falsa.
+- **Out-of-Band SQLi**. 
+	- Enviar payloads OAST diseñados para provocar una interacción con una conexión out-of-band cuando se ejecuta dentro de una query SQL, y monitorear si tenemos algún resultado en un servidor que controlemos.
+	- Es muy útil saber que base de datos se esta utilizando.
+	- Depende de si la base de datos tiene estas funciones activadas y si existe algún otro tipo de servicio como un DNS lookup.
+	- Dependiendo de la inyección SQL se utilizan diferentes métodos para extraer datos.
+- **Herramientas automatizadas**. 
+	- sqlmap
+		- Open Source.
+		- Utilizada para encontrar vulnerabilidades SQLi.
+		- Personalizable. Seleccionas en que parámetros realizar la inyección.
+		- Si encuentras una inyección SQL puedes pedirle que intente conseguir una shell o que intente extraer los usuarios y contraseñas de la aplicación.
+	- Web Application Vulnerability Scanners (WAVS).
+		- No solamente buscan inyecciones SQL sino cualquier tipo de vulnerabilidad posible.
+## How to prevent SQLi vulnerabilities?
+### Defensas principales
+- **Opción 1: Utilizar Declaraciones Preparadas (Consultas parametrizadas) en lugar de concatenar una string.**
+	- Esta es la forma correcta de mitigarlo.
+- Código vulnerable a SQLi:
+	- El usuario proporciona la entrada `"customerName"` la cual es interpretada como parte de la sentencia SQL.
+``` Java
+String query = "SELECT account_balance FROM user_data WHERE user_name= " 
+				+ request.getParameter("customerName");
+try{
+	Statement st = connection.createStatement(...);
+	ResultSet res = st.executeQuery(query);
+}
+```
+- La construcción de sentencias SQL es realizada en dos pasos:
+	- La aplicación determina la estrucura de la query con *placeholders* para cada entrada del usuario.
+	- La aplicación determina el contenido de cada *placeholder*.
+- Código no vulnerable a SQLi
+```Java
+// Estó debe ser BIEN validado
+String custname = request.getParameter("customerName");
+// Realizar validación de la entrada para detectar ataques
+String query = "SELECT account_balance FROM user_data WHERE user_name = ? ";
+PreparedStatement pstmt = connection.preparedStatement( query );
+pstmt.setString(1,custname);
+ResultSet results = pstmt.executeQuery();
+```
+- **Opción 2: Uso de Procedimientos Almacenados.**
+	- Un procedimiento almacenado es un lote de sentencias agrupadas y almacenadas en la base de datos.
+	- No siempre es seguro contra inyecciones SQL, sigue la necesidad de realizar llamada en forma parametrizada.
+- **Opción 3: Validación de input con Whitelist**
+	- Definir que valores son autorizados. Cualquier otra cosa no es autorizada.
+	- Útil para valores que no pueden ser especificados como placeholders de parámetros, como el nombre de la tabla.
+- **Escapar todos los input proporcionados por el usuario.**
+	- Utilizar solo como último recurso.
+### Defensas adicionales
+- **Defensa en profundidad**
+	- **Menor privilegio**
+		- La aplicación debe tener el menor nivel de privilegios cuando accede a la base de datos.
+		- Cualquier funcionalidad innecesaria en la base de datos debe ser removidad o deshabilitada.
+		- Asegurarse de que el [CIS Benchmark](https://www.tarlogic.com/es/blog/controles-cis-las-mejores-practicas-en-ciberseguridad/) para la base de datos en uso sea correctamente aplicado.
+		- Todos los parches de seguridad del proveedor deben ser aplicados en el menor tiempo posible, para no dejar una ventana de tiempo que un atacante puede aprovechar.
+## Referencia
+[SQL Injection | Complete Guide - YouTube](https://www.youtube.com/watch?v=1nJgupaUPEQ)
