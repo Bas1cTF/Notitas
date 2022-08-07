@@ -11,3 +11,4 @@ Buscar la flag.
 Las USB se montan en el directorio /dev/sda. Pero es posible ver mejor con el comando `mount`
 
 DumpOps AD en PwntillDawn
+

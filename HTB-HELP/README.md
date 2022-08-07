@@ -14,7 +14,7 @@ Traer el exploit: `searchsploit -m <Number> .`
 
 # Escalar privilegios
 - Ver que binarios hay con permisos SuID -s
-	- `find \-perm -4000 2>/dev/null`
+	- `find / \-perm -4000 2>/dev/null`
 - capabilities dadas a binarios
 	- `getcap -r / 2>/dev/null`
 - Que permisos sudo tenemos (sudoers)
@@ -25,11 +25,13 @@ Traer el exploit: `searchsploit -m <Number> .`
 	- `uname -a`
 		- Puedes ver si esta desactualizado
 - Ver en que grupo nos encontramos
-`id`
+	- `id`
 - Comprobar conexiones 
-`netstat -nat`
+	- `netstat -nat`
+	- `ss -ant`
+	- Enumerar servicios encontrados.
 - Comprobar si estamos en la máquina victima o un contenedor
-`hostname -I`
+	- `hostname -I`
 - Buscar archivos
 - Tareas cron
 	- `cat /etc/crontab`
@@ -78,3 +80,19 @@ Scripting!!!!!!
 Buscar biblioteca requests python
 
 62b085:1337
+
+[Double Encoding | OWASP Foundation](https://owasp.org/www-community/Double_Encoding)
+
+# bart
+
+Appweb server de embedthis
+
+Se bypassea borrando todo lo que sigue del usuario.
+
+- Checar archivos de configuración
+- /etc/appweb
+
+# martin
+
+Fallas de configuración ftp
+- Usuario anonymous
