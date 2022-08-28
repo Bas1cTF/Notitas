@@ -96,3 +96,14 @@ Se bypassea borrando todo lo que sigue del usuario.
 
 Fallas de configuración ftp
 - Usuario anonymous
+
+# nopal
+- Exponer puertos locales por medio de `socat`.
+- `socat` es un binario no comun
+- snmpwalk
+
+# prisonbreak
+Cell1
+- Expuesto por el manual
+Cell2
+- sudo -l
