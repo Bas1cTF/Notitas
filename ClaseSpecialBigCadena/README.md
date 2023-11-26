@@ -1,5 +1,5 @@
 # Baby RSA
-La mala implementación fue al cifrar caracter por caracter, en lugar de toda la cadena. 
+La mala implementación fue al cifrar carácter por carácter, en lugar de toda la cadena. 
 
 La forma de resolverlo era hacer fuerza bruta.
 

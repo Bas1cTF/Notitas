@@ -5,12 +5,12 @@
 **No entendí**
 3. ¿Qué sistemas operativos enfocados a ciberseguridad hay hechos en linux? Nombrar 3 distribuciones y caracteristica principal.
 * Kali. Es la distribución más popular para pentesting, con una comunidad respaldada por OSCP.
-* Parrot. Es un proyecto llevado por Parrot Security CIC, una compañia comunitaria resgistrada en Reino Unido.
+* Parrot. Es un proyecto llevado por Parrot Security CIC, una compañía comunitaria registrada en Reino Unido.
 * BackBox. Realizado sobre un sistema Ubuntu totalmente personalizado.
 4.  ¿Cuál es el sistema operativo mas utilizado a nivel usuario? ¿Por qué?
-Windows, debido a que la mayoria de las computadoras personales vienen incluidas con una licencia de Windows, la mayoría de la gente está habituada a utilizarlo, a esto le podemos sumar la popularidad que tiene.
+Windows, debido a que la mayoría de las computadoras personales vienen incluidas con una licencia de Windows, la mayoría de la gente está habituada a utilizarlo, a esto le podemos sumar la popularidad que tiene.
 5. ¿Cuál es el sistema operativo mas utilizado en servidores? ¿Por qué?
-Debido a que se trata de un SO open source, haciendo posible montarlo en distintas máquinas, las cuales solo se requiere ejecutar un servidor y administrarlo.
+Linux, Debido a que se trata de un SO open source, haciendo posible montarlo en distintas máquinas, las cuales solo se requiere ejecutar un servidor y administrarlo.
 6. ¿Cuál crees que es el riesgo de tener el disco particionado y poseer en un lado windows y en otro linux? 
 Tener algún fallo que pueda provocar perdidas en el otro sistema operativo.
 7. ¿Cuál crees que es el mayor riesgo que se puede correr al tener sistemas operativos en maquinas virtuales?

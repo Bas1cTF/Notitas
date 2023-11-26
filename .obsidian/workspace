@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Rooms/Tor-Linux.md",
+            "file": "RedesIII/README.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "2fcaff86c8311d43",
@@ -69,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rooms/Tor-Linux.md",
+                "file": "RedesIII/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +90,15 @@
   },
   "active": "ab9c1396e81a9ffd",
   "lastOpenFiles": [
-    "Blog/regex.md",
-    "README.md",
+    "HTB-HELP/README.md",
+    "Groovymolly/README.md",
+    "echoschool/README.md",
+    "HTB-Seal/README.md",
+    "HTB-SWAGSHOP/README.md",
     "Notas/Road-to-Hackmex.md",
     "Notas/14-07.md",
-    "LinuxModules/Index.md",
-    "HTB-Mirai/README.md",
-    "HTB-SWAGSHOP/README.md",
-    "Inv-Windows/Investigating Windows.md",
-    "Curso/Modulo1.md",
-    "XML External Entities/README.md"
+    "Scrambled/README.md",
+    "Rooms/Tor-Linux.md",
+    "RedesIII/README.md"
   ]
 }

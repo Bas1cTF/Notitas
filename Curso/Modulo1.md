@@ -8,12 +8,12 @@ Es un método para evaluar los sistemas de información y la red de una organiza
 2. ¿Qué es una auditoría de ciberseguridad y cual es la diferencia con un pentest?  
 Una auditoría consiste en la evaluación de las medidas de seguridad en una empresa. Mientras un pentest su objetivo puede ser solo un sistema, en la auditoría se tiene como objetivo todos los sistemas y redes de una empresa.
 3. ¿Qué significan las siglas C.I.A con respecto a ciberseguridad y a que se refiere?
-Es la triada C.I.A (siglas en inglés), la cual signfica Confidencialidad, Integridad y Disponibilidad. Se refiere a los principios fundamentales para la seguridad de la información. Los profesionales evalúan las amenazas y vulnerabilidades basandose en el impacto potencial que tienen en la *Confidencialidad*, *Integridad* y *Disponibilidad* de los activos de una organización.
+Es la triada C.I.A (siglas en inglés), la cual significa Confidencialidad, Integridad y Disponibilidad. Se refiere a los principios fundamentales para la seguridad de la información. Los profesionales evalúan las amenazas y vulnerabilidades basándose en el impacto potencial que tienen en la *Confidencialidad*, *Integridad* y *Disponibilidad* de los activos de una organización.
 4. ¿Qué es un Red Team?
-Esta formado por profesionales que actuan como amenazas que intentan superar los controles de seguridad. Su objetivo es descubrir vulnerabilidades en los sistemas mediante la simulación de ataques.
+Esta formado por profesionales que actúan como amenazas que intentan superar los controles de seguridad. Su objetivo es descubrir vulnerabilidades en los sistemas mediante la simulación de ataques.
 6. ¿Qué es un Blue Team?
 Es el equipo encargado de defender a las organizaciones de ataques de manera proactiva. Esta compuesto por expertos especializados en analizar el comportamiento de los sistemas de una empresa.
-7. ¿Qué otros grupos de trabajo existen ademas de los nombrados?
+7. ¿Qué otros grupos de trabajo existen además de los nombrados?
 Existe el purple team, en el cual se coordinan el Blue Team y el Red Team, garantizando que compartan información sobre las vulnerabilidades del sistema para lograr una mejora constante.
 
 9. ¿Cuál es la ley de delitos informáticos que aplica a tu país? (explicar 3 artículos con sus palabras)
